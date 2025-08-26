@@ -21,6 +21,6 @@ export const startFFmpeg = (platform) => {
 export const stopFFmpeg = () => {
   if (ffmpegProcess) {
     ffmpegProcess.kill("SIGINT");
-    ffmpegProcess = null;
+    ffmpegProcess = null; //hola
   }
 };
