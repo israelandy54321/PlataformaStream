@@ -1,0 +1,114 @@
+:root {
+  --bg: #0f1216;
+  --panel: #151a21;
+  --primary: #3b82f6;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --danger: #ef4444;
+  --success: #22c55e;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.app {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.topbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--panel);
+  border-bottom: 1px solid #222831;
+}
+
+.topbar .grow { flex: 1; }
+.btn {
+  background: #1f2937;
+  color: var(--text);
+  border: 1px solid #263041;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn:hover { background: #243041; }
+.btn.primary { background: var(--primary); border-color: var(--primary); }
+.btn.danger  { background: var(--danger); border-color: var(--danger); }
+.btn.success { background: var(--success); border-color: var(--success); }
+
+.panel {
+  background: var(--panel);
+  border: 1px solid #263041;
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.layout {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 12px;
+  padding: 12px;
+}
+
+.rightcol {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 12px;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+}
+
+.banner {
+  margin-top: auto;
+  align-self: center;
+  background: rgba(15,15,15,0.6);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 18px;
+  pointer-events: all;
+}
+
+.gridarea {
+  position: relative;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #263041;
+}
+
+.kbd {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background: #0b0f14;
+  border: 1px solid #263041;
+  padding: 2px 6px;
+  border-radius: 6px;
+  color: var(--muted);
+}
+
+.uploader {
+  display: grid;
+  gap: 8px;
+}
+.small {
+  font-size: 12px;
+  color: var(--muted);
+}
